@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { useRouter } from "next/router";
-import {Adsense} from '@ctrl/react-adsense';
+// import {Adsense} from '@ctrl/react-adsense';
 
 const BannerAd = () => {
   const router = useRouter()
