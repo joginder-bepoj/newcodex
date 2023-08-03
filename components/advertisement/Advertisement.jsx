@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 // import {Adsense} from '@ctrl/react-adsense';
 import { useRouter } from "next/router";
 
