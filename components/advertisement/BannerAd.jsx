@@ -6,7 +6,17 @@ const BannerAd = () => {
   const router = useRouter()
 
   useEffect(()=>{
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    const refreshAds = () => {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    };
+
+    // Refresh ads when the router changes
+    router.events.on("routeChangeComplete", refreshAds);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      router.events.off("routeChangeComplete", refreshAds);
+    };
   },[router])
   
   return (
