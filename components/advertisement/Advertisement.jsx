@@ -1,20 +1,30 @@
 import React from "react";
-import {Adsense} from '@ctrl/react-adsense';
+// import {Adsense} from '@ctrl/react-adsense';
+import { useRouter } from "next/router";
 
 const Advertisement = () => {
+ const router = useRouter()
+
+  useEffect(()=>{
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  },[router])
  
   return (
     <>
       <section className="google-add pt-4"  >
         <div className="container">
-          <Adsense
+         <ins className="adsbygoogle"
+        style={{display: "block"}}
+        data-ad-client="ca-pub-6596297344025689"
+        data-ad-slot="1458448211"></ins>
+{/*           <Adsense
             className="adsbygoogle"
             style={{ display: "block" }}
             data-ad-client="ca-pub-6596297344025689"
             data-ad-slot="1458448211"
             data-ad-format="auto"
             data-full-width-responsive="true"
-          />
+          /> */}
         </div>
       </section>
     </>
