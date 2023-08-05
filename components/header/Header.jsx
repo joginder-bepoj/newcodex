@@ -347,13 +347,6 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link title="Quizes"
-                   className={`nav-link ${router.pathname === "/quizes" && 'active'}`}
-                    href="/quizes">
-                    Quizes
-                  </Link>
-                </li>
-                <li className="nav-item">
                   <Link title="About Us"
                    className={`nav-link ${router.pathname === "/about" && 'active'}`}
                     href="/about">
