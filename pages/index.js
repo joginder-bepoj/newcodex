@@ -40,7 +40,7 @@ export default function Home({metaTags,  skillData, loading}) {
   return (
     <div >
       <Head>
-        <title>Home</title>
+        <title>CodexView: Explore Online Courses & Learning Resources</title>
         <meta name="keywords" content={metaTags[0].meta_tags} />
         <meta name="description" content={metaTags[0].meta_description} />
         <link rel="icon" href="/favicon.ico" />
