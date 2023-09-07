@@ -6,19 +6,12 @@ const Advertisement = () => {
  const router = useRouter()
 
   useEffect(()=>{
-    const refreshAds = () => {
-      // Make sure the adsbygoogle array is defined
+    try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-    };
-
-    // Refresh ads when the router changes
-    router.events.on("routeChangeComplete", refreshAds);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      router.events.off("routeChangeComplete", refreshAds);
-    };
-  },[router])
+    } catch (err) {
+      console.log(err);
+    }
+  },[])
  
   return (
     <>
