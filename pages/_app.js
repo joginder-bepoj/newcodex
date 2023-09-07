@@ -41,8 +41,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <StateContext>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6596297344025689"
-     crossOrigin="anonymous"></script>
       <Component {...pageProps} loading={loading} />
     </StateContext>
   );
