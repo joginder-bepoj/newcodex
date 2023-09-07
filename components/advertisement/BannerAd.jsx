@@ -1,23 +1,13 @@
 import React, {useEffect} from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 // import {Adsense} from '@ctrl/react-adsense';
 
 const BannerAd = () => {
-  const router = useRouter()
-
-  useEffect(()=>{
-    const refreshAds = () => {
+  useEffect(() => {
+    if (window) {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-    };
-
-    // Refresh ads when the router changes
-    router.events.on("routeChangeComplete", refreshAds);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      router.events.off("routeChangeComplete", refreshAds);
-    };
-  },[router])
+    }
+  }, []);
   
   return (
     <>
