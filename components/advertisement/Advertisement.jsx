@@ -1,17 +1,13 @@
 import React, {useEffect} from "react";
 // import {Adsense} from '@ctrl/react-adsense';
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 const Advertisement = () => {
- const router = useRouter()
-
-  useEffect(()=>{
-    try {
+  useEffect(() => {
+    if (window) {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.log(err);
     }
-  },[])
+  }, []);
  
   return (
     <>
